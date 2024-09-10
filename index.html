@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+
+    
+    <style>
+        .box {
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #000;
+            text-align: center;
+            position: relative;
+        }
+
+        #input-container {
+            display: none; /* Initially hide the input and button */
+            margin-top: 20px;
+        }
+
+        #name-input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #submit-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="name">Sudrit Ghimire</h1>
+        <p id="demo"></p>
+        <div id="input-container">
+            <input type="text" id="name-input" placeholder="Enter your name">
+            <button id="submit-button" onclick="validate()">Submit</button>
+        </div>
+    </div>
+    <script>
+        var i = 0;
+        var txt = 'Hi,\nMy name is SUD-01, I am your virtual assistant.\n\nPlease type your name below to get started.';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                // Show the input and button after 1 second
+                setTimeout(function() {
+                    document.getElementById("input-container").style.display = 'block';
+                }, 900); // 1000 milliseconds = 1 second
+            }
+        }
+
+        typeWriter();
+
+
+        function validate() {
+    var name = document.getElementById("name-input").value.toLowerCase(); // Convert input to lowercase
+    var validNames = ["saroj", "osin", "satish", "shishir","kamala","jiban","sabita","sudrit"]; // Array of valid names
+
+    if (validNames.includes(name)) {
+        window.location.href = 'index1.html'; // Redirect to index1.html
+    } else {
+        alert("I am sorry."); // Display an alert if the name is not valid
+    }
+}
+
+    </script>
+</body>
+</html>

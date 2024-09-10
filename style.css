@@ -1,0 +1,204 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Zilla Slab", serif;
+    background-color: #060c21;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    padding: 25px;
+    color: #fff;
+    background-color: #060c21;
+    box-sizing: border-box;
+}
+
+.box:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+}
+
+.box:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.box:before,
+.box:after {
+    background: linear-gradient(135deg, #89ff00, #060c21, #00bcd4);
+}
+
+    #demo {
+        white-space: pre-wrap;
+      }
+      #submit-button {
+        padding: 12px 24px; /* Adjust padding as needed */
+        font-size: 16px;
+        background-color: #007BFF; /* Button color */
+        color: white;
+        border: none;
+        border-radius: 8px; /* Optional: rounded corners */
+        cursor: pointer;
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glowing effect */
+    }
+    
+    #submit-button:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.75); /* Intensified glow on hover */
+    }
+    #input-container {
+        display: none; /* Initially hide the input and button */
+        margin-top: 20px; /* Add space above the container if needed */
+    }
+    
+    #name-input {
+        padding: 10px;
+        font-size: 16px;
+        width: 100%; /* Ensure input takes full width of container */
+        box-sizing: border-box; /* Include padding in element's total width */
+    }
+    
+    #submit-button {
+        padding: 12px 24px; /* Adjust padding as needed */
+        font-size: 16px;
+        background-color: #007BFF; /* Button color */
+        color: white;
+        border: none;
+        border-radius: 8px; /* Optional: rounded corners */
+        cursor: pointer;
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glowing effect */
+        margin-top: 10px; /* Add space above the button */
+    }
+    
+    #submit-button:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.75); /* Intensified glow on hover */
+    }
+/* Import the Montserrat and Lora fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+
+/* Apply the font to the body for consistent styling */
+body {
+    font-family: 'Montserrat', sans-serif; /* Main font for the body */
+}
+
+#name-input {
+    font-family: 'Lora', serif; /* Elegant font for input text */
+    font-size: 16px; /* Font size for input text */
+    border: 1px solid #ddd; /* Light border for input field */
+    border-radius: 8px; /* Rounded corners for input */
+    padding: 10px;
+    width: 100%; /* Ensure input takes full width of container */
+    box-sizing: border-box; /* Include padding in element's total width */
+    margin-bottom: 10px; /* Space below input field */
+}
+
+#submit-button {
+    font-family: 'Montserrat', sans-serif; /* Main font for button text */
+    font-size: 16px; /* Font size for button text */
+    background-color: #007BFF; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners for button */
+    cursor: pointer;
+    padding: 12px 24px; /* Adjust padding as needed */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glowing effect */
+}
+
+#submit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.75); /* Intensified glow on hover */
+}
+
+.colorful-text span {
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+body {
+    font-family: 'Oswald', sans-serif;  /* Apply Dancing Script font to h1 elements */
+}
+
+.name{
+    font-family: 'Dancing Script', cursive;
+}   
+/* Keyframes for the glowing border effect */
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Red */
+    }
+    25% {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Green */
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* Blue */
+    }
+    75% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); /* Yellow */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Magenta */
+    }
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    padding: 25px;
+    color: #fff;
+    background-color: #060c21;
+    box-sizing: border-box;
+    animation: glowing-border 3s infinite; /* Apply the glowing border animation */
+}
+
+.box:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -1;
+    animation: glowing-border 3s infinite; /* Apply the glowing border animation */
+}
+
+.box:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    z-index: -2;
+    filter: blur(40px);
+    background: linear-gradient(135deg, #89ff00, #060c21, #00bcd4);
+    animation: glowing-border 3s infinite; /* Apply the glowing border animation */
+}
